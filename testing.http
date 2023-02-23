@@ -1,0 +1,463 @@
+### Get all branch
+GET http://localhost:3000/api/branchs
+Accept: application/json
+
+### Get detail branch
+GET http://localhost:3000/api/branchs/2/detail
+Accept: application/json
+
+### Create branch data
+POST http://localhost:3000/api/branchs
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Branch Employee",
+  "telephone_number": 622323232,
+  "address": {
+    "building_name": "Building Test",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Update branch data
+PUT http://localhost:3000/api/branchs/1/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id" : 6,
+  "name": "Branch Employee Updated",
+  "telephone_number": 622323232,
+  "address": {
+    "id": 9,
+    "building_name": "Building Test Updated",
+    "building_number": 20,
+    "street": "Street Test Updated",
+    "village": "Village Test Updated",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test Updated",
+    "district": "District Test Updated",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Delete branch data
+DELETE http://localhost:3000/api/branchs/3/delete
+Accept: application/json
+
+### Get all employee
+GET http://localhost:3000/api/employees
+Accept: application/json
+
+### Get detail employee
+GET http://localhost:3000/api/employees/1/detail
+Accept: application/json
+
+### Create employee data
+POST http://localhost:3000/api/employees
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id_branch": 1,
+  "code": "X2MD23",
+  "level": "Checker",
+  "full_name": "Shimatukang",
+  "password": "rahasia",
+  "email": "test@test.com",
+  "telephone_number": 62232,
+  "photo": "/src/bash",
+  "status": "Active",
+  "address": {
+    "building_name": "Building Test",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Update employee data
+PUT http://localhost:3000/api/employees/1/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "id_branch": 4,
+  "code" : "XA2D2",
+  "level": "Marker",
+  "full_name": "Employee Updated",
+  "password": "rahasia banget",
+  "telephone_number": 6232231,
+  "photo": "/var/src",
+  "status": "Cuti"
+}
+
+### Delete employee data
+DELETE http://localhost:3000/api/employees/3/delete
+Accept: application/json
+
+### Get all inventory
+GET http://localhost:3000/api/inventories
+Accept: application/json
+
+### Get detail inventory
+GET http://localhost:3000/api/inventories/1/detail
+Accept: application/json
+
+### Create inventory data
+POST http://localhost:3000/api/inventories
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id_employee":1,
+  "code": "X23SRD",
+  "commodity": "Deriot",
+  "variant": "Pewangi",
+  "quantity": 200,
+  "price": 20000,
+  "supplier": "PT. Deriot Ind"
+}
+
+### Update inventory data
+PUT http://localhost:3000/api/inventories/1/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "id_employee":1,
+  "code": "X23SA",
+  "commodity": "Deriot UPDATED",
+  "variant": "Pewangi UPDATED",
+  "quantity": 200,
+  "price": 20000,
+  "supplier": "PT. Deriot Ind UPDATED"
+
+}
+
+### Delete inventory data
+DELETE http://localhost:3000/api/inventories/3/delete
+Accept: application/json
+
+### Get all service
+GET http://localhost:3000/api/services
+Accept: application/json
+
+### Get detail service
+GET http://localhost:3000/api/services/2/detail
+Accept: application/json
+
+### Create service data
+POST http://localhost:3000/api/services
+Accept: application/json
+Content-Type: application/json
+
+{
+  "code": "X23D23",
+  "name": "Kiloan",
+  "price": 20000,
+  "duration": 3
+}
+
+### Update service data
+PUT http://localhost:3000/api/services/1/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "code": "X23D24",
+  "name": "Kiloan UPDATE",
+  "price": 40000,
+  "duration": 5
+}
+
+### Delete service data
+DELETE http://localhost:3000/api/services/1/delete
+Accept: application/json
+
+### Get all promo
+GET http://localhost:3000/api/promos
+Accept: application/json
+
+### Get detail promo
+GET http://localhost:3000/api/promos/5/detail
+Accept: application/json
+
+### Create promo data
+POST http://localhost:3000/api/promos
+Accept: application/json
+Content-Type: application/json
+
+{
+  "code": "X2DAE",
+  "name": "Kiloan",
+  "discount": 3,
+  "description": "Promo BANG",
+  "status": "Active",
+  "photo": "/var/src",
+  "start": "2004-12-04",
+  "end": "2004-12-03"
+}
+
+### Update promo data
+PUT http://localhost:3000/api/promos/1/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "code": "X23D22",
+  "name": "Alew2",
+  "discount": 2,
+  "description": "Promo BANG",
+  "status": "Active",
+  "photo": "/var/src",
+  "start": "2004-12-04",
+  "end": "2004-12-08"
+}
+
+### Delete promo data
+DELETE http://localhost:3000/api/promos/1/delete
+Accept: application/json
+
+### Get all user
+GET http://localhost:3000/api/users
+Accept: application/json
+
+### Get detail user
+GET http://localhost:3000/api/users/1/detail
+Accept: application/json
+
+### Create user data
+POST http://localhost:3000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "level": "Silver",
+  "full_name": "Arusip",
+  "gender": "Man",
+  "password": "testPassword",
+  "email": "arusip@gmail.com",
+  "telephone_number": 62032323,
+  "photo":"/var/src",
+  "address": {
+    "building_name": "Building Test",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Update user data
+PUT http://localhost:3000/api/users/2/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 2,
+  "level": "Silver",
+  "full_name": "Arusip UPDATED",
+  "gender": "Man",
+  "password": "testPassword",
+  "email": "arusip@gmail.com",
+  "telephone_number": 62032323,
+  "photo":"/var/src",
+  "address": {
+    "id": 4,
+    "building_name": "Building Test",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Delete user data
+DELETE http://localhost:3000/api/users/1/delete
+Accept: application/json
+
+### Get all admin
+GET http://localhost:3000/api/admins
+Accept: application/json
+
+### Get detail admin
+GET http://localhost:3000/api/admins/1/detail
+Accept: application/json
+
+### Create admin data
+POST http://localhost:3000/api/admins
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id_branch": 1,
+  "code": "X2D2D",
+  "level": "Laundry",
+  "full_name": "Arusip",
+  "password": "testPassword",
+  "email": "arusip@gmail.com",
+  "telephone_number": 62032323,
+  "photo":"/var/src",
+  "status": "Active",
+  "address": {
+    "building_name": "Building Test",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Update admin data
+PUT http://localhost:3000/api/admins/2/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "id_branch": 1,
+  "code": "X2D2D",
+  "level": "Laundry",
+  "full_name": "Arusip",
+  "password": "testPassword",
+  "email": "arusip@gmail.com",
+  "telephone_number": 62032323,
+  "photo":"/var/src",
+  "status": "Active",
+  "address": {
+    "id": 7,
+    "building_name": "Building Test Updated",
+    "building_number": 20,
+    "street": "Street Test",
+    "village": "Village Test",
+    "neighbourhood_number": 20,
+    "hamlet_number": 20,
+    "sub_district": "Sub District Test",
+    "district": "District Test",
+    "postal_code": 20,
+    "province": "Province Test",
+    "description": "Deket Pecel Lele"
+  }
+}
+
+### Delete admin data
+DELETE http://localhost:3000/api/admins/2/delete
+Accept: application/json
+
+### Get all order
+GET http://localhost:3000/api/orders
+Accept: application/json
+
+### Get detail order
+GET http://localhost:3000/api/orders/23/detail
+Accept: application/json
+
+### Create order data
+POST http://localhost:3000/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id_user": 2,
+  "id_employee": 1,
+  "id_service": 2,
+  "id_promos": [2,3,4],
+  "id_inventories": [1,2],
+  "code": "X2D2A ",
+  "type": "Kiloin",
+  "price": 2000,
+  "weight": 3,
+  "payment": "Whangsaff",
+  "description": "Pembayaran via Whangsaff",
+  "status": "On Progress",
+  "telephone_number": 62032323,
+  "entry": "2023-01-02"
+}
+
+### Update order data
+PUT http://localhost:3000/api/orders/123/edit
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 5,
+  "id_user": 2,
+  "id_employee": 1,
+  "id_service": 2,
+  "id_promos": [2,3],
+  "id_inventories": [2],
+  "code": "X2D2AB",
+  "type": "Satuin",
+  "price": 5000,
+  "weight": 5,
+  "payment": "Whangsaff UPDATED",
+  "description": "Pembayaran via Whangsaff UPDATED",
+  "status": "On Progress",
+  "telephone_number": 62032323,
+  "entry": "2023-01-02",
+  "out": "2023-01-10"
+}
+
+### Delete order data
+DELETE http://localhost:3000/api/orders/1/delete
+Accept: application/json
+Content-Type: application/json
+Cookie: token = ayJhbGciOiJIUzI1NiIsInR5cadwadawdawdawdawd.eyJFbWFpbCI6ImFydXNpcEBnbWFpbC5jb20iLCJpc3MiOiJsYXVuZHJ5LWFwcCIsImV4cCI6MTY3NjEwNDc1NH0.JeT7-9UKKIkypsqVd03L_lsZlc24vWDYkIhJ8Gd7AAo
+
+### Login
+POST http://localhost:3000/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "arusip@gmail.com",
+  "password": "testPassword"
+}
+
+### Logout
+GET http://localhost:3000/logout
+Accept: application/json
+Content-Type: application/json
